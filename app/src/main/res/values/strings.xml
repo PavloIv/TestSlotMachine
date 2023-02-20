@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestSlotMachine</string>
+    <string name="image">image</string>
+    <string name="score_text">My Score</string>
+</resources>
