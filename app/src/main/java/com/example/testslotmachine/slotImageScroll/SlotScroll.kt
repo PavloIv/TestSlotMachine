@@ -36,7 +36,6 @@ class SlotScroll: FrameLayout {
     }
 
     private fun init(context: Context){
-//        LayoutInflater.from(context).inflate(R.layout.slot_image_scroll, this)
         val inflater = LayoutInflater.from(context)
         binding = SlotImageScrollBinding.inflate(inflater,this,true)
         binding.root

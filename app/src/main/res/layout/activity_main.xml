@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/backgraund"
     tools:context=".MainActivity">
 
     <TextView
@@ -22,9 +22,11 @@
         android:layout_width="560dp"
         android:layout_height="220dp"
         android:layout_below="@+id/score_tv"
-        android:layout_centerInParent="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10sp"
         android:layout_marginTop="20sp"
-        android:background="@drawable/frame">
+        android:layout_marginBottom="100dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -53,12 +55,23 @@
                 android:layout_gravity="center_vertical"
                 android:padding="10sp" />
 
-
         </LinearLayout>
 
 
     </FrameLayout>
 
+    <ImageView
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/layout_bar"
+        android:layout_alignEnd="@+id/layout_bar"
+        android:layout_alignBottom="@+id/layout_bar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-10sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/green_frame" />
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -66,7 +79,7 @@
         android:layout_marginStart="400sp"
         android:layout_marginTop="10sp"
         android:padding="20sp"
-        android:text="Button" />
+        android:text="@string/spin" />
 
 
 </RelativeLayout>
