@@ -10,8 +10,8 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity(),EventEnd {
 
-    var score = 1000
-    var bet = 50
+    private var score = 1000
+    private var bet = 50
 
     private lateinit var binding: ActivityMainBinding
 
@@ -45,11 +45,12 @@ class MainActivity : AppCompatActivity(),EventEnd {
         }
 
         binding.buttonSpin.setOnClickListener{
+            binding.buttonSpin.isClickable = false
             if(score >= 50){
                 binding.apply {
                     image1.setRandomValue(Random.nextInt(6), Random.nextInt(15-5+1)+5)
                     image2.setRandomValue(Random.nextInt(6), Random.nextInt(15-5+1)+5)
-                    image3.setRandomValue(Random.nextInt(6), Random.nextInt(15-5+1)+5)  }
+                    image3.setRandomValue(Random.nextInt(6), Random.nextInt(15-5+1)+5) }
 
                 score -= bet
                 binding.scoreTv.text = score.toString()
@@ -70,11 +71,13 @@ class MainActivity : AppCompatActivity(),EventEnd {
                 Toast.makeText(this,"YOU WON!!!!", Toast.LENGTH_SHORT).show()
                 score += bet * 6
                 binding.scoreTv.text = score.toString()
+                binding.buttonSpin.isClickable = true
             }
             else if(binding.image1.value == binding.image2.value || binding.image2.value == binding.image3.value || binding.image1.value == binding.image3.value){
                 Toast.makeText(this,"You did good.", Toast.LENGTH_SHORT).show()
                 score += bet * 2
                 binding.scoreTv.text = score.toString()
+                binding.buttonSpin.isClickable = true
             }
             else{
                 Toast.makeText(this,"You lost. Better luck next time.", Toast.LENGTH_SHORT).show()
@@ -84,6 +87,7 @@ class MainActivity : AppCompatActivity(),EventEnd {
                     bet = score
                     binding.bet.text = bet.toString()
                 }
+                binding.buttonSpin.isClickable = true
             }
         }
     }
