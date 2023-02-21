@@ -13,7 +13,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-
         android:layout_marginStart="30sp"
         android:layout_marginTop="20sp"
         android:layout_marginBottom="100dp">
@@ -130,7 +129,6 @@
         android:id="@+id/buttMinus"
         android:layout_width="80sp"
         android:layout_height="wrap_content"
-
         android:layout_below="@+id/bet"
         android:layout_alignStart="@+id/bet"
         android:layout_marginStart="0sp"
@@ -142,7 +140,6 @@
         android:id="@+id/buttPlus"
         android:layout_width="80sp"
         android:layout_height="wrap_content"
-
         android:layout_alignTop="@+id/buttMinus"
         android:layout_alignEnd="@+id/bet"
         android:layout_marginTop="0sp"

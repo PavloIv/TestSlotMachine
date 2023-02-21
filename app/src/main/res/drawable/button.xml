@@ -5,8 +5,7 @@
     <gradient
         android:startColor="@color/gold"
         android:endColor="@color/orange"/>
-<!--    <solid-->
-<!--        android:color="@color/gold"/>-->
+    <stroke android:width="2sp" android:color="@color/red"/>
     <corners
         android:radius="15sp"
         />
