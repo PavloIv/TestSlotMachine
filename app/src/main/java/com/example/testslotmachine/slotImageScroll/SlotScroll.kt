@@ -37,7 +37,9 @@ class SlotScroll: FrameLayout {
 
     private fun init(context: Context){
         val inflater = LayoutInflater.from(context)
+
         binding = SlotImageScrollBinding.inflate(inflater,this,true)
+
         binding.root
 
         binding.nextImage.translationY = height.toFloat()
@@ -49,12 +51,10 @@ class SlotScroll: FrameLayout {
             .setDuration(ANIMATION_DURATION.toLong()).start()
 
         binding.nextImage.translationY = binding.nextImage.height.toFloat()
+
         binding.nextImage.animate()
             .translationY(0f).setDuration(ANIMATION_DURATION.toLong())
             .setListener(object: Animator.AnimatorListener{
-                override fun onAnimationRepeat(animation: Animator) {
-                }
-
                 override fun onAnimationEnd(animation: Animator) {
                     setImage(binding.currentImage, oldValue%6)
                     binding.currentImage.translationY = 0f
@@ -72,17 +72,16 @@ class SlotScroll: FrameLayout {
 
                 }
 
+                override fun onAnimationRepeat(animation: Animator) {
+                }
                 override fun onAnimationCancel(animation: Animator) {
                 }
-
                 override fun onAnimationStart(animation: Animator) {
                 }
 
             }).start()
-
     }
 
-    //!! symbol is for asserting non-null to variables
     private fun setImage(currentImage: ImageView?, value: Int){
         when (value) {
             Utils.bar -> currentImage!!.setImageResource(R.drawable.bar)
