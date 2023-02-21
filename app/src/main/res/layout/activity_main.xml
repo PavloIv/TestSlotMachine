@@ -8,13 +8,13 @@
 
     <FrameLayout
         android:id="@+id/layout_bar"
-        android:layout_width="560dp"
-        android:layout_height="220dp"
+        android:layout_width="560sp"
+        android:layout_height="220sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
 
-        android:layout_marginStart="10sp"
+        android:layout_marginStart="30sp"
         android:layout_marginTop="20sp"
         android:layout_marginBottom="100dp">
 
@@ -51,14 +51,14 @@
     </FrameLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="570sp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/layout_bar"
         android:layout_alignTop="@+id/layout_bar"
         android:layout_alignEnd="@+id/layout_bar"
         android:layout_alignBottom="@+id/layout_bar"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="-20dp"
+        android:layout_marginStart="0sp"
         android:layout_marginTop="0sp"
         android:layout_marginEnd="-20sp"
         android:layout_marginBottom="0sp"
